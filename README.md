@@ -1,2 +1,2 @@
 # LeetCode Solutions
-You could explore my solutions for LeetCode's tasks
+You could see my solutions for LeetCode's tasks here
