@@ -1,4 +1,4 @@
-const searchInsert = function(nums, target) {
+const searchInsert = (nums, target) => {
     let start = 0;
     let end = nums.length - 1;
 
