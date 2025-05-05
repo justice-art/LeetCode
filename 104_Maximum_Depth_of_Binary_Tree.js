@@ -10,13 +10,20 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-    if(!root) return 0;
-    const leftNode = maxDepth(root.left) + 1;
-    const rightNode = maxDepth(root.right) + 1;
 
-    return Math.max(leftNode, rightNode);
+const { buildTreeFromArray } = require('./helpers.js');
+
+const maxDepth = function(root) {
+    if(!root) return 0;
+
+    const leftNode = maxDepth(root.left);
+    const rightNode = maxDepth(root.right);
+
+    return Math.max(leftNode, rightNode) + 1;
 };
 
-const res = maxDepth([3,9,20,null,null,15,7]);
+const treeArray = [3, 9, 20, null, null, 15, 7];
+const root = buildTreeFromArray(treeArray);
+
+const res = maxDepth(root); 
 console.log(res);
