@@ -3,10 +3,10 @@ const searchInsert = (nums, target) => {
     let end = nums.length - 1;
 
     while (start <= end) {
-        const middle = Math.floor((start + end) / 2);
+        const middle = start + Math.floor((end - start) / 2);
         if (target === nums[middle]) {
             return middle;
-        } else if(nums[middle] > target) {
+        } else if(target < nums[middle]) {
             end = middle - 1;
         } else {
             start = middle + 1;
